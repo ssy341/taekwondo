@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>课程表 | 成龙拳馆</title>
+    {% include header.html %}
+</head>
+
+<body>
+    <div id="maincontent">
+
+        <!--Top Nav-->
+        <div class="bar">
+          {% include share.html %}
+      </div>
+      <!--End Top Nav-->
+
+      <div class="box">
+        <a name="top" id="top"></a>
+
+        <!--Main Bar-->
+        <div class="container_12 navbar">
+           <!--Logo-->
+            {% include logo.html %}
+           <!--End Logo-->
+            {% include main-nav.html param='schedule' %}
+    </div>
+    <!--End Main Bar-->
+
+    <div class="clearsmall"></div>
+    
+    <div class="headertext">成龙拳馆课程表<span>跆拳道/散打/女子防身术/健康减肥/中学生体能改善</span></div>
+
+    <div class="container_12">
+
+        <!--Start Grid 12-->
+        <div class="grid_12">
+            
+            <p></p>
+            
+            <div class="clearsmall"></div>
+            
+            <div id="container">
+                <table id="regulartable">
+                    <caption><h2>成龙拳馆课程表</h2></caption>
+                    <colgroup>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col" class="regularstandard"></th>
+                        <th scope="col" class="regularstandard">周一</th>
+                        <th scope="col" class="regularstandard">周二</th>
+                        <th scope="col" class="regularstandard">周三</th>
+                        <th scope="col" class="regularstandard">周四</th>
+                        <th scope="col" class="regularstandard">周五</th>
+                        <th scope="col" class="regularstandard">周六</th>
+                        <th scope="col" class="regularstandard">周日</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="regulartable-highlight-odd">早上7:30 ~ 9:30</td>
+                        <td class="regulartable-odd">休息</td>
+                        <td class="regulartable-odd">&nbsp;</td>
+                        <td class="regulartable-odd">&nbsp;</td>
+                        <td class="regulartable-odd">&nbsp;</td>
+                        <td class="regulartable-odd">&nbsp;</td>
+                        <td class="regulartable-odd">一对一班</td>
+                        <td class="regulartable-odd">一对一班</td>
+                    </tr>
+                    <tr>
+                        <td class="regulartable-highlight-even">上午10:00 ~ 11:00</td>
+                        <td class="regulartable-even">休息</td>
+                        <td class="regulartable-even"></td>
+                        <td class="regulartable-even"></td>
+                        <td class="regulartable-even"></td>
+                        <td class="regulartable-even"></td>
+                        <td class="regulartable-even">一对四班</td>
+                        <td class="regulartable-even">一对四班</td>
+                    </tr>
+                    <tr>
+                        <td class="regulartable-highlight-odd">下午2:30 ~ 3:30</td>
+                        <td class="regulartable-odd">休息</td>
+                        <td class="regulartable-odd"></td>
+                        <td class="regulartable-odd"></td>
+                        <td class="regulartable-odd"></td>
+                        <td class="regulartable-odd"></td>
+                        <td class="regulartable-odd">散打一对四班</td>
+                        <td class="regulartable-odd">散打一对四班</td>
+                    </tr>
+                    <tr>
+                        <td class="regulartable-highlight-even">下午4:30 ~ 6:00</td>
+                        <td class="regulartable-even">休息</td>
+                        <td class="regulartable-even"></td>
+                        <td class="regulartable-even"></td>
+                        <td class="regulartable-even"></td>
+                        <td class="regulartable-even">初级班1</td>
+                        <td class="regulartable-even">初级班2</td>
+                        <td class="regulartable-even">中级班</td>
+                    </tr>
+                    <tr>
+                        <td class="regulartable-highlight-odd">下午4:30 ~ 5:30</td>
+                        <td class="regulartable-odd">休息</td>
+                        <td class="regulartable-odd"></td>
+                        <td class="regulartable-odd"></td>
+                        <td class="regulartable-odd"></td>
+                        <td class="regulartable-odd">私教一对四班</td>
+                        <td class="regulartable-odd"></td>
+                        <td class="regulartable-odd"></td>
+                    </tr>
+                    <tr>
+                        <td class="regulartable-highlight-even">下午5:40 ~ 6:40</td>
+                        <td class="regulartable-even">休息</td>
+                        <td class="regulartable-even">初级班一</td>
+                        <td class="regulartable-even">中级班</td>
+                        <td class="regulartable-even">初级班二</td>
+                        <td class="regulartable-even"></td>
+                        <td class="regulartable-even">一对四班</td>
+                        <td class="regulartable-even">一对四班</td>
+                    </tr>
+                    <tr>
+                        <td class="regulartable-highlight-odd">晚上7:00 ~ 8:30</td>
+                        <td class="regulartable-odd">休息</td>
+                        <td class="regulartable-odd">中级班</td>
+                        <td class="regulartable-odd">初级班2</td>
+                        <td class="regulartable-odd">高级班</td>
+                        <td class="regulartable-odd">高级班</td>
+                        <td class="regulartable-odd">高级实战练习</td>
+                        <td class="regulartable-odd">初级班一</td>
+                    </tr>
+                    <tr>
+                        <td class="regulartable-highlight-even">晚上7:30 ~ 8:30</td>
+                        <td class="regulartable-even">休息</td>
+                        <td class="regulartable-even">一对一</td>
+                        <td class="regulartable-even">一对一</td>
+                        <td class="regulartable-even"></td>
+                        <td class="regulartable-even">一对四</td>
+                        <td class="regulartable-even">成人散打</td>
+                        <td class="regulartable-even">成人散打</td>
+                    </tr>
+                    <tr>
+                        <td colspan="8">备注:初级1班：4~6(入门班、白带——黄带) 初级2班：7~10 中级班：黄绿带——绿带 高级班：绿蓝带——红带 <br>
+                            分班安排：根据年龄，级别分班。大家安排好时间来上课。谢谢
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            
+        </div>
+        <!--End Grid 12-->
+        <div class="clearsmall"></div>
+        <p>
+            如果对上有疑问，欢迎致电（网页下方），将有专业教练为你指导
+        </p>            
+        
+    </div>
+    <!--End Grid 12-->
+          <div class="clearsmall"></div>
+          {% include changyan.html %}
+
+</div>
+
+<div class="clearsmall"></div>
+
+<!--End Box-->
+
+
+<!--Footer-->
+
+        {% include js.html %}
+{% include footer.html %}
+{% include copyright.html %}
+
+
+</div>
+</body>
+</html>

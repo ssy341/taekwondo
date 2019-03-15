@@ -1,0 +1,15 @@
+baseurl: /
+url: http://clboxing.com
+encoding: utf-8
+exclude: ['ueditor','.idea','aa','.gitignore','README.md','*.bat','taekwondo.iml']
+#destination: ./_site
+#destination: C:\code\xampp\htdocs
+
+
+# page config
+gems: [jekyll-paginate]
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Build settings
+markdown: kramdown

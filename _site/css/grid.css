@@ -1,0 +1,215 @@
+.container_12{
+	margin-left:auto;
+	margin-right:auto;
+	width:960px;
+}
+/*-----------Grids-----------*/
+.grid_1,.grid_2,.grid_3,.grid_4,.grid_4_no_hover,.grid_5,.grid_6,.grid_7,.grid_8,.grid_9,.grid_10,.grid_11,.grid_12,.grid_13,.grid_14,.grid_15,.grid_16,.showbox,.fullwidth,.halfwidth,.thirdwidth,.fourthwidth,.sixthwidth{
+	display:inline;
+	float:left;
+	margin-left:0px;
+	margin-right:20px;
+	padding-top:0px;
+}
+.grid_1_no_margin,.grid_2_no_margin,.grid_3_no_margin,.grid_4_no_margin,.grid_5_no_margin,.grid_6_no_margin,.grid_7_no_margin,.grid_8_no_margin,.grid_9_no_margin,.grid_10_no_margin,.grid_11_no_margin,.grid_12_no_margin{
+	display:inline;
+	float:left;
+	margin:0px;
+	padding:0px;
+}
+.container_12 .grid_1{
+	width:60px
+}
+.container_12 .grid_1_no_margin{
+	width:80px
+}
+.container_12 .grid_2{
+	width:140px
+}
+.container_12 .grid_2_no_margin{
+	width:160px
+}
+.container_12 .sixthwidth{
+	width:130px
+}
+.container_12 .grid_3{
+	width:200px
+}
+.container_12 .fourthwidth{
+	width:210px
+}
+.container_12 .grid_3_no_margin{
+	width:240px;
+}
+.container_12 .grid_4{
+	width:292px;
+}
+.container_12 .grid_4_no_margin{
+	width:320px;
+}
+.container_12 .thirdwidth{
+	width:285px
+}
+.container_12 .grid_5{
+	width:380px
+}
+.container_12 .grid_6{
+	width:450px
+}
+.container_12 .halfwidth{
+	width:440px
+}
+.container_12 .grid_6_no_margin{
+	width:480px
+}
+.container_12 .grid_7{
+	width:540px
+}
+.container_12 .grid_8{
+	width:620px;
+}
+.container_12 .grid_8_no_margin{
+	width:668px;
+}
+.container_12 .grid_9{
+	width:660px
+}
+.container_12 .grid_9_no_margin{
+	width:720px;
+}
+.container_12 .grid_10{
+	width:780px;
+}
+.container_12 .grid_11{
+	width:860px;
+}
+.container_12 .grid_12{
+	width:960px;
+}
+.container_12 .grid_12_no_margin{
+	width:960px;
+}
+.container_12 .fullwidth{
+	width:920px;
+}
+/*-----------Clear-----------*/
+.clear{
+	clear:both;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	height:0;
+	padding:20px
+}
+.clearsmall{
+	clear:both;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	height:0;
+	padding:10px
+}
+.clearextrasmall{
+	clear:both;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	height:0;
+	padding:5px
+}
+.clearnospacing{
+	clear:both;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	height:0;
+	padding:0px
+}
+.clearsidebar{
+	clear:both;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	height:0;
+	padding-bottom:10px
+}
+.clearfooter{
+	clear:both;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	height:0;
+}
+.cleargallery{
+	clear:both;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	height:0;
+}
+.clearcoda{
+	clear:both;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	height:0;
+	padding:10px
+}
+.clearfix:before,.clearfix:after{
+	content:'\0000';
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	height:0
+}
+.clearfix:after{
+	clear:both
+}
+.clearfix{
+	zoom:1
+}
+/*-----------Misc-----------*/
+.addpadding{
+	padding-top:30px;
+	padding-bottom:30px;
+	padding-left:20px;
+	padding-right:20px;
+}
+.boxpadding{
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:20px;
+	padding-right:20px;
+}
+.showbox{
+	width:198px;
+}
+.box_background{
+}
+.alpha{
+	margin-left:0
+}
+.omega{
+	margin-right:0
+}
+.paddingleft{
+	padding-left:20px;
+}
+.paddingright{
+	padding-right:40px;
+}
+.marginleft{
+	margin-left:20px;
+}
+.marginright{
+	margin-right:20px;
+}

@@ -1,0 +1,27 @@
+---
+layout: news
+---
+{% for post in site.categories.news %}
+
+<!--Blog Post-->
+        <div class="hover_slideshow">
+        	<!-- <a href="images/placeholder.jpg" rel="prettyPhoto[blog1]" title="Blog post with lightbox gallery"> -->
+            <img src="../images/blog" alt="" width="660" height="240" /></a>
+            <!-- <a href="images/placeholder.jpg" rel="prettyPhoto[blog1]" title="Additional image or video"></a> -->
+            <!-- <a href="images/placeholder.jpg" rel="prettyPhoto[blog1]" title="Another image or video"></a> -->
+        </div>
+        <div class="blog_box">
+	        <div class="grid_7">
+	        	<h5>{{ post.date | date_to_string }}</h5>
+	        	<h3><a href="../post.html" title="Permalink to Blog Post with Lightbox Gallery">{{ post.title }}</a></h3>
+	            {{ post.short }}
+	        </div>
+
+        <div class="clearnospacing"></div>
+    	</div>
+    	<!--End Blog Post-->
+
+        <div class="clear"></div>
+
+        {% endfor %}
+        

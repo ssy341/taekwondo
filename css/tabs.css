@@ -1,0 +1,104 @@
+@CHARSET "UTF-8";
+
+#container{
+	margin: 0px;
+	width: 100%;
+}
+#container ul{
+	list-style: none;
+}
+#container ul.menu li{
+	float: left;
+	margin: 0px;
+	display: block;
+	padding: 10px 15px 10px 15px;
+	border-top:#f1f1f1 solid 1px;
+	border-right:#f1f1f1 solid 1px;	
+	color: #444444;
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(255, 255, 255);
+	/* RGBa with 0.6 opacity */
+	background: rgba(255, 255, 255, 0.2);
+	cursor: pointer;
+	font-size:13px;
+	font-family: 'PT Sans', sans-serif;
+	text-shadow:0 0 0 transparent,#ffffff 0px 0px 0px;
+}
+#container ul.menu li:first-child{
+	border-left:#f1f1f1 solid 1px;
+}
+#container ul.menu li:last-child{
+	margin-right: 0px;
+}
+#container ul.menu li.active{
+	font-size: 13px;
+	font-family: 'PT Sans', sans-serif;
+	color: #ffffff;
+	background-color:#08ab0f;	
+	text-shadow:0 0 0 transparent, 0px 0px 0px #ffffff;
+}
+.content{
+	margin: 0pt auto;
+	margin-bottom:-7px;
+	text-align: left;
+	padding: 25px;
+	font-size: 11px;
+	border:#f1f1f1 solid 1px;
+}
+.content.one{
+	display: block;
+}
+.content.two{
+	display: none;
+}
+.content.three{
+	display: none;
+}
+.content.four{
+	display: none;
+}
+.content.links a{
+	color: #08ab0f;
+}
+
+.footer #container ul.menu{
+	float: right;
+}
+.footer #container ul.menu li{
+	float: left;
+	margin-left: 0px;
+	margin-right:0px;
+	margin-bottom: 0px;
+	margin-top: -39px;
+	display: block;
+	padding: 10px 15px 10px 15px;
+	border-top:#444444 solid 0px;
+	border-right:#444444 solid 1px;
+	border-bottom:#444444 solid 1px;
+	color: #cccccc;
+	background-color:#222222;
+	cursor: pointer;
+	font-size:13px;
+	font-family: 'PT Sans', sans-serif;
+	text-shadow:0 0 0 transparent,#999999 0px 0px 0px;
+}
+.footer #container ul.menu li:first-child{
+	border-left:#555555 solid 1px;
+}
+.footer #container ul.menu li.active{
+	font-size: 13px;
+	font-family: 'PT Sans', sans-serif;
+	color: #ffffff;
+	font-weight:bold;
+	background-color:#222222;
+	text-shadow:0 0 0 transparent, 0px 0px 0px #999999;
+}
+.footer .content{
+	margin: 0pt auto;
+	margin-bottom:0px;
+	text-align: left;
+	padding: 0px;
+	padding-top: 50px;
+	font-size: 11px;
+	border:#f1f1f1 solid 0px;
+}

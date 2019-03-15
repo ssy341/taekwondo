@@ -1,0 +1,15 @@
+img: 3.jpg
+simg: 3-s.jpg
+title: 学员合照
+prettyPhoto: project3
+group:
+  - url: images/newImage/3/1.jpg
+    title: 帅
+  - url: images/newImage/3/2.jpg
+    title: 霸气侧漏
+  - url: images/newImage/3/3.jpg
+    title: 谭政一点都不淡定
+  - url: images/newImage/3/4.jpg
+    title: 散打
+  - url: images/newImage/3/5.jpg
+    title: 就是这样

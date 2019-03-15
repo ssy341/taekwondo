@@ -1,0 +1,13 @@
+<li>
+    {% assign four = site.data.picturelist.four %}
+    {% if four.prettyPhoto == "default" %}
+    <a href="images/newImage/{{ four.img }}" class="alternate" rel="prettyPhoto" title="{{ four.title }}"></a>
+    {% else %}
+    <a href="images/newImage/{{ four.img }}" class="alternate" rel="prettyPhoto[{{ four.prettyPhoto }}]"
+       title="{{ four.title }}"></a>
+    {% for picture in four.group %}
+    <a href="{{picture.url}}" class="alternate4" rel="prettyPhoto[{{four.prettyPhoto}}]" title="{{picture.title}}"></a>
+    {% endfor %}
+    {% endif %}
+    <img src="images/newImage/{{ four.simg }}" width="209" height="160" alt="" />
+</li>

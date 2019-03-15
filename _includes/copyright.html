@@ -1,0 +1,135 @@
+<!--Copyright Section-->
+<div class="bottombar">
+    <div class="bottombar_container">
+    
+        <div class="copyright">Powered by<a href="http://www.thxopen.com" target="_blank" title="Thxopen.com">Thxopen.com</a>&copy; 成龙拳馆 2014-2016</div>
+
+        <div class="bottom_nav">
+            <div class="crumb_navigation">
+                <ul>
+                    <li><a href="/" class="fade">主页</a></li>
+                    <li><a href="/company" class="fade">拳馆介绍</a></li>
+                    <li><a href="/teacher" class="fade">教练风采</a></li>
+                    <li><a href="/schedule" class="fade">课表</a></li>
+                    <li><a href="/news" class="fade">动态</a></li>
+                    <li><a href="/#" class="fade">学员考级查询</a></li>
+                    <li><a href="/joinus" class="fade">关于我们</a></li>
+                    <li>
+                        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                        document.write(unescape("%3Cspan id='cnzz_stat_icon_1254695489'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1254695489%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <p><a href="#top" id="top-link" title="回到最上面"></a></p> 
+        
+    </div>   
+</div>
+<!--百度url推送-->
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+<script type="text/javascript">
+
+    var current = new Date().getTime();
+    //如果文章的时间和当前时间的差小余100天，则给出提示
+    var blance = 100 * 24 * 60 * 60 * 1000;
+    //如果标记时间与当前时间的差大于7天，则给出提示
+    var over = 7 * 24 * 60 * 60 * 1000;
+//    var over = 10000;
+    $.get("/assets/bloglist.json",function(data){
+        if(typeof data != 'object'){
+            data = JSON.parse(data);
+        }
+        for(var i = 0;i<data.length;i++){
+            var date = data[i].date;
+            date = Date.parse(date);
+            if(current - date < blance){
+//            if(true){
+                count++;
+            }
+        }
+        var count = 0;
+        var blogtime = localStorage['clboxing.com.blog'];
+        if(count > 0 || typeof blogtime == 'undefined'){
+            $("#notice").addClass("note");
+            if(count>0)
+                $("#postCount").addClass("note_count").html(count);
+        }
+        if(typeof blogtime != 'undefined'){
+            if(current - blogtime < over){
+                $("#notice").removeClass("note");
+                $("#postCount").removeClass("note_count").html("");
+            }
+        }
+    });
+    $.get("/assets/newlist.json",function(data){
+        var count = 0;
+        if(typeof data != 'object'){
+            data = JSON.parse(data);
+        }
+        for(var i = 0;i<data.length;i++){
+            var date = data[i].date;
+            date = Date.parse(date);
+            if(current - date < blance){
+//            if(true){
+                count++;
+            }
+        }
+
+        var newstime = localStorage['clboxing.com.news'];
+        if(count > 0 || typeof newstime == 'undefined'){
+            $("#notice").addClass("note");
+            if(count>0)
+                $("#newsCount").addClass("note_count").html(count);
+        }
+        if(typeof newstime != 'undefined'){
+            if(current - newstime < over) {
+                $("#notice").removeClass("note");
+                $("#newsCount").removeClass("note_count").html("");
+            }
+        }
+    });
+
+    $.get("/assets/notelist.json",function(data){
+        var count = 0;
+        if(typeof data != 'object'){
+            data = JSON.parse(data);
+        }
+        var tmp =data.data;
+        for(var i = 0;i<tmp.length;i++){
+            var date = tmp[i].date;
+            date = Date.parse(date);
+            if(current - date < blance){
+//            if(true){
+                count++;
+            }
+        }
+
+        var notetime = localStorage['clboxing.com.note'];
+        if(count > 0 || typeof notetime == 'undefined'){
+            $("#notice").addClass("note");
+            if(count>0)
+                $("#noteCount").addClass("note_count").html(count);
+        }
+        if(typeof notetime != 'undefined'){
+            if(current - notetime < over) {
+                $("#notice").removeClass("note");
+                $("#noteCount").removeClass("note_count").html("");
+            }
+        }
+    });
+</script>

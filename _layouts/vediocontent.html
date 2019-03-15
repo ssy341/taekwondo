@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{{ page.title }} | 行业动态 | 成龙拳馆</title>
+    <style type="text/css">@import url("{{ site.baseurl }}css/reset.css");</style>
+    <style type="text/css">@import url("{{ site.baseurl }}css/grid.css");</style>
+    <style type="text/css">@import url("{{ site.baseurl }}css/styles.css");</style>
+    <style type="text/css">@import url("{{ site.baseurl }}css/tabs.css");</style>
+    <!--Common jQuery-->
+    <script src="{{ site.baseurl }}js/jquery-1.6.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}js/jquery.easing.1.3.js"></script>
+    <!--Coda Slider-->
+    <style type="text/css">@import url("{{ site.baseurl }}css/coda-slider-2.0.css");</style>
+
+
+    <!--Parallax-->
+    <style type="text/css">@import url("{{ site.baseurl }}layerslider/css/layerslider.css");</style>
+    <style type="text/css">@import url("{{ site.baseurl }}css/parallax.css");</style>
+    <script src="{{ site.baseurl }}layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#layerslider').layerSlider({
+                navPrevNext : true,
+                navButtons : false,
+                navStartStop : false,
+                animateFirstLayer : true,
+                skinsPath : '{{ site.baseurl }}layerslider/skins/'
+            });
+        });
+    </script>
+    <!--Toggle-->
+    <style type="text/css">@import url("{{ site.baseurl }}css/toggle.css");</style>
+    <!--Scroll Top-->
+    <script type="text/javascript" src="{{ site.baseurl }}js/scroll.js"></script>
+    <!--Pretty Photo-->
+    <style type="text/css">@import url("{{ site.baseurl }}css/prettyPhoto.css");</style>
+    <script src="{{ site.baseurl }}js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+    <!--Nivo-->
+    <style type="text/css">@import url("{{ site.baseurl }}css/nivo-slider.css");</style>
+    <script type='text/javascript' src='{{ site.baseurl }}js/jquery.nivo.slider.js'></script>
+    <script type='text/javascript'>
+        $(window).load(function() {
+            $('#slider').nivoSlider();
+        });
+    </script>
+    <!--Background-->
+    <script type="text/javascript" src="{{ site.baseurl }}js/jquery.fullbg.min.js"></script>
+    <!--New Menu-->
+    <style type="text/css">@import url("{{ site.baseurl }}css/menu.css");</style>
+    <script type="text/javascript" src="{{ site.baseurl }}js/jquery.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}js/easing.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}js/menu.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="/images/favicon.png">
+</head>
+
+<body>
+<div id="maincontent">
+
+    <!--Top Nav-->
+    <div class="bar">
+
+        {% include share.html %}
+
+    </div>
+    <!--End Top Nav-->
+
+    <!--Start Box-->
+    <div class="box">
+        <a name="top" id="top"></a>
+
+        <!--Main Bar-->
+        <div class="container_12 navbar">
+            <!--Logo-->
+            {% include logo.html %}
+            <!--End Logo-->
+
+            {% include main-nav.html param='things' %}
+        </div>
+        <!--End Main Bar-->
+
+        <div class="clearsmall"></div>
+
+        <div class="headertext">成龙拳馆<span>精彩视频</span></div>
+
+        <div class="container_12">
+
+            <!--Start Grid 9-->
+            <div class="grid_9">
+
+                <!--Blog Post-->
+
+                <div class="blog_box">
+
+                    <div class="grid_8">
+                        <h2>
+                            <a href="{{ page.url }}" title="{{ page.title }}">
+                                {{ page.title }}
+                            </a>
+                        </h2>
+                        <a href="{{ page.from }}" title="{{ page.author }}" target="_blanck"> {{ page.author }}</a>
+                        <h6>
+                            {{ page.date | date:'%Y-%m-%d' }}
+                        </h6>
+                        标签:
+                        {% for tag in page.tags  %}
+                        <a href="#" class="button tag small">{{ tag }}</a>
+                        {% endfor %}
+
+                        <div class="clearsmall"></div>
+                        {{page.description}}
+                        <div class="dividerslim"></div>
+
+                        <div class="hover_slideshow">
+                            <embed src="{{ page.from }}" allowFullScreen="true" quality="high" width="620" height="500" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+                        </div>
+
+                        {% include changyan.html %}
+                    </div>
+                    <div class="clearsmall"></div>
+                    <div class="clearnospacing"></div>
+
+                </div>
+                <!--End Blog Post-->
+                <div class="clearsmall"></div>
+                <div class="clear"></div>
+            </div>
+            <!--End Grid 9-->
+
+            <!--Start Sidebar-->
+            <div class="grid_3 sidebarright alignright">
+
+                {% include rightsidebar.html %}
+
+            </div>
+            <!--End Sidebar-->
+
+        </div>
+
+        <div class="clearnospacing"></div>
+
+        <h3>
+    <span>
+        <a href="{{ site.baseurl }}blog/" class="button minimal small alignleftnopad">
+            回到博客列表
+        </a>
+    </span>
+        </h3>
+        <div class="clearnospacing"></div>
+
+    </div>
+    <!--End Box-->
+
+
+    <!--Footer-->
+
+    {% include footer.html %}
+
+    <!--Copyright Section-->
+    <!-- 引入copyright.html -->
+    {% include copyright.html %}
+
+    <script type="text/javascript" src="{{ site.baseurl }}js/custom_filter.js"></script>
+
+    <!--Tool Tip-->
+    <script type="text/javascript">
+        var tip = $();
+        $(document).ready(function() {
+            //Tooltips
+            $(".tip_trigger").hover(function(){
+                tip = $(this).find('.tip');
+                tip.show(); //Show tooltip
+            }, function() {
+                tip.hide(); //Hide tooltip
+            }).mousemove(function(e) {
+                var mousex = e.pageX + 20; //Get X coodrinates
+                var mousey = e.pageY + 20; //Get Y coordinates
+                var tipWidth = tip.width(); //Find width of tooltip
+                var tipHeight = tip.height(); //Find height of tooltip
+
+                //Distance of element from the right edge of viewport
+                var tipVisX = $(window).width() - (mousex + tipWidth);
+                //Distance of element from the bottom of viewport
+                var tipVisY = $(window).height() - (mousey + tipHeight);
+
+                //Absolute position the tooltip according to mouse position
+                tip.css({  top: mousey, left: mousex });
+            });
+        });
+    </script>
+
+    <!--Tabs-->
+    <script type="text/javascript" src="{{ site.baseurl }}js/tabs.js"></script>
+
+
+
+    <!--Coda Slider-->
+    <script type="text/javascript" src="{{ site.baseurl }}js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}js/jquery.coda-slider-2.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#coda-slider-1').codaSlider();
+        });
+    </script>
+
+
+</div></body></html>
+

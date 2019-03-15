@@ -1,0 +1,14 @@
+---
+layout: vedio
+---
+{% for post in site.categories.vedio %}
+   <li data-id="1" data-type="cardio_fitness">
+                            <div class="hover_slideshow">
+                            <embed src="{{ post.from }}" allowFullScreen="true" quality="high" width="290" height="160" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+                            </div>
+                            <div class="text_box">
+                                <h4>{{ post.title }}</h4>
+                                <p>{{ post.description }}</p>
+                            </div>
+                        </li>
+{% endfor %}

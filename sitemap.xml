@@ -1,0 +1,114 @@
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<!-- Free Sitemap Generator http://www.sitemapx.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://clboxing.com/</loc>
+        <priority>1.0</priority>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>Always</changefreq>
+    </url>
+    <url>
+        <loc>http://clboxing.com/blog/</loc>
+        <priority>0.6</priority>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>Always</changefreq>
+    </url>
+    <url>
+        <loc>http://clboxing.com/company/</loc>
+        <priority>0.6</priority>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>Always</changefreq>
+    </url>
+    <url>
+        <loc>http://clboxing.com/contact/</loc>
+        <priority>0.6</priority>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>Always</changefreq>
+    </url>
+    <url>
+        <loc>http://clboxing.com/joinus/</loc>
+        <priority>0.6</priority>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>Always</changefreq>
+    </url>
+    <url>
+        <loc>http://clboxing.com/news/</loc>
+        <priority>0.6</priority>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>Always</changefreq>
+    </url>
+    <url>
+        <loc>http://clboxing.com/note/</loc>
+        <priority>0.6</priority>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>Always</changefreq>
+    </url>
+    <url>
+        <loc>http://clboxing.com/schedule/</loc>
+        <priority>0.6</priority>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>Always</changefreq>
+    </url>
+    <url>
+        <loc>http://clboxing.com/student/</loc>
+        <priority>0.6</priority>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>Always</changefreq>
+    </url>
+    <url>
+        <loc>http://clboxing.com/teacher/</loc>
+        <priority>0.6</priority>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>Always</changefreq>
+    </url>
+    <url>
+        <loc>http://clboxing.com/vedio/</loc>
+        <priority>0.6</priority>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>Always</changefreq>
+    </url>
+    <url>
+        <loc>http://clboxing.com/news/2014/10/07/changjun-boxing-show.html</loc>
+        <priority>0.1</priority>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>Always</changefreq>
+    </url>
+    <url>
+        <loc>http://clboxing.com/news/2015/05/17/taekwondo-grade.html</loc>
+        <priority>0.1</priority>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>Always</changefreq>
+    </url>
+    {% assign bloglist = site.categories.blog %}
+    {% for post in bloglist %}
+    <url>
+        <loc>{{ site.url }}{{ post.url }}</loc>
+        <priority>1.0</priority>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>Always</changefreq>
+    </url>
+    {% endfor %}
+
+    {% assign newslist = site.categories.news %}
+    {% for post in newslist %}
+    <url>
+        <loc>{{ site.url }}{{ post.url }}</loc>
+        <priority>1.0</priority>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>Always</changefreq>
+    </url>
+    {% endfor %}
+
+    {% assign notelist = site.categories.note %}
+    {% for post in notelist %}
+    <url>
+        <loc>{{ site.url }}{{ post.url }}</loc>
+        <priority>1.0</priority>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>Always</changefreq>
+    </url>
+    {% endfor %}
+</urlset>

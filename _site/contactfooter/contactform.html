@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+	<title>联系我们</title>
+	
+	<link rel="stylesheet" type="text/css" href="contact.css" />
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script src="http://thxopen.sinaapp.com/util/mail/mail.js"></script>   
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+
+<!-- Form Code Start -->
+<form id='contactus' accept-charset='UTF-8' />
+	<fieldset>
+		
+		<input type='text'  id='name' value='姓名' maxlength="50" onfocus="if(this.value=='姓名')this.value='';" onblur="if(this.value=='')this.value='姓名';" /><br />
+		<input type='text'  id='phone' value='电话' maxlength="50" onfocus="if(this.value=='电话')this.value='';" onblur="if(this.value=='')this.value='电话';" /><br />
+		<textarea rows="10" cols="50" name='note' id='note'></textarea>
+		<input type='button' id="contactussubmit" value='提交' class="button highlight small" />
+		<span id="error" class='error'></span>
+	</fieldset>
+</form>
+<!-- client-side Form Validations:
+Uses the excellent form validation script from JavaScript-coder.com-->
+
+<script type='text/javascript'>
+// <![CDATA[    
+    $( document ).ready(function(){
+    	$("#contactussubmit").click(function(){
+    		var name = $("#name").val();
+    		var phone = $("#phone").val();
+    		var note = $("#note").val();
+    		if(name.length<0 || name==="姓名") $("#error").html("请输入姓名");
+    		if(phone.length<0 || phone==="电话") $("#error").html("请输入电话");
+    		if(name.length>0 && name!="姓名" && phone.length>0 && phone!="电话"){
+				sendmail("来自网站的消息",name,phone,note);
+				alert("感谢您的来信，我们已经收到！");
+				var name = $("#name").val("姓名");
+    			var phone = $("#phone").val("电话");
+    			var note = $("#note").val("");
+    		}
+    	});
+    	
+    });
+
+// ]]>
+</script>
+
+</body>
+</html>

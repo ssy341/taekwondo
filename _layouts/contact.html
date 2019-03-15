@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>联系我们 | 成龙拳馆</title>
+{% include header.html %}
+</head>
+
+<body>
+<div id="maincontent">
+
+<!--Top Nav-->
+<div class="bar">
+    {% include share.html %}
+</div>
+<!--End Top Nav-->
+
+<!--Start Box-->
+<div class="box">
+<a name="top" id="top"></a>
+
+<!--Main Bar-->
+<div class="container_12 navbar">
+    <!--Logo-->
+    {% include logo.html %}
+	<!--End Logo-->
+    {% include main-nav.html param='about' %}
+</div>
+<!--End Main Bar-->
+
+<div class="clearsmall"></div>
+    
+<div class="headertext">联系<span>真诚的期待您的来电</span></div>
+
+<div class="container_12">
+
+    <div class="grid_9">
+        <div class="clear"></div>
+
+        <h3>我们的位置</h3>
+        <div class="clearsmall"></div>
+        <div class="dividerslim"></div>
+        <iframe width="670px" height="220px" src="/assets/map.html"></iframe>
+
+
+            
+        <div class="clear"></div>
+
+        <div class="clear"></div>
+        
+    <h3>上班时间</h3>
+    <!--Start Table-->        
+	<table id="regulartable">
+    <colgroup>
+    	<col />
+    	<col />
+    	<col class="regulartable-enhance" />
+        <col />
+    </colgroup>
+    <tbody>   
+    	<tr>
+            <td>星期一</td>
+            <td>休息</td>
+        </tr>
+        <tr>
+            <td class="regulartable-odd">星期二</td>
+            <td class="regulartable-odd">上午6.00 - 下午9.00</td>
+        </tr>
+        <tr>
+        	<td>星期三</td>
+            <td>上午6.00 - 下午9.00</td>
+        </tr>
+        <tr>
+        	<td class="regulartable-odd">星期四</td>
+            <td class="regulartable-odd">上午6.00 - 下午9.00</td>
+        </tr>
+         <tr>
+        	<td>星期五</td>
+            <td>上午6.00 - 下午9.00</td>
+        </tr>
+    	<tr>
+        	<td class="regulartable-odd">星期六</td>
+            <td class="regulartable-odd">上午6.00 - 下午9.00</td>
+        </tr>        
+         <tr>
+        	<td>星期天</td>
+            <td>上午6.00 - 下午9.00</td>
+        </tr>                                 
+    </tbody>   
+	</table>
+    <!--End Table-->
+
+        {% include changyan.html %}
+    </div>
+    <!--End Grid 9-->
+    
+	<!--Start Sidebar--> 
+    <div class="grid_3 sidebarright alignright">
+    
+        	<p><span class="phonecontact">155-8089-9100</span></p>
+           	<p><span class="emailcontact"> <a href="mailto:65004257@qq.com" class="color">65004257@qq.com</a></span></p>
+            <p><span class="mailcontact">市政府 </span></p>
+            <p><a target=blank href=tencent://message/?uin=65004257&Site=成龙拳馆&Menu=yes><img border="0" SRC=http://wpa.qq.com/pa?p=1:65004257:1 alt="点击这里给我发消息"></a></p>
+            
+            <div class="clear"></div>
+
+        <h4>新闻</h4>
+        <!--Start Image Widget-->
+        <!-- div标签放在页面需要展示的位置  -->
+        <div id="cyHotnews" role="cylabs" data-use="hotnews"></div>
+        <!-- 如果页面已有畅言的评论框，以下代码放在评论框代码的后面，来读取评论框的配置，否则需在div标签或代码中配置sid、cid(分类id) -->
+
+        <!--End Image Widget-->
+        <div class="clear"></div>
+
+
+        <!--热文-->
+        <!-- div标签放在页面需要展示的位置  -->
+        <div id="cyRecom" role="cylabs" data-use="recom"></div>
+        <!-- 如果页面已有畅言的评论框，以下代码放在评论框代码的后面，来读取评论框的配置，否则需在div标签或代码中配置sid、cid(分类id) -->
+
+
+        <div class="clear"></div>
+
+        <h4>热评</h4>
+        <!-- div标签放在页面需要展示的位置  -->
+        <div id="cyReping" role="cylabs" data-use="reping"></div>
+        <!-- 如果页面已有畅言的评论框，以下代码放在评论框代码的后面，来读取评论框的配置，否则需在div标签或代码中配置sid、cid(分类id) -->
+
+
+        <div class="clear"></div>
+
+        <h4>标签</h4>
+        {% for post in site.posts  %}
+        {% for tag in post.tags  %}
+        <a href="#" class="button tag small">{{ tag }}</a>
+        {% endfor %}
+        {% endfor %}
+        <div class="clear"></div>
+
+
+        <!-- 如果页面同时使用多个实验室项目，以下代码只需要引入一次，只配置上面的div标签即可 -->
+        <script type="text/javascript" charset="utf-8" src="http://changyan.itc.cn/js/??lib/jquery.js,changyan.labs.js?appid=cyrbX98Bq"></script>
+
+
+       
+     </div>
+     <!--End Sidebar-->
+    
+</div>
+
+<div class="clearnospacing"></div>
+
+</div>
+<!--End Box-->
+    {% include js.html %}
+<!--Footer 引入footer.html-->
+            {% include footer.html %}
+
+            <!-- 引入copyright.html -->
+            {% include copyright.html %}
+
+<!--End Footer-->
+
+
+</div></body></html>

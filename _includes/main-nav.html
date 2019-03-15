@@ -1,0 +1,97 @@
+<style>
+    .note{
+        min-width: 5px;
+        width: 5px;
+        height: 9px;
+        line-height: 12px;
+        text-align: center;
+        display: inline-block;
+        padding: 0 2px;
+        background: #FF0A03;
+        color: #fff;
+        border-radius: 20px;
+        position: absolute;
+        top: -2px;
+        border: 1px solid #fff;
+    }
+    .note_count{
+        position: absolute;
+        right: 35px;
+        top: -3px;
+        border: 1px solid #fff;
+        min-width: 18px;
+        width: 18px;
+        height: 13px;
+        line-height: 14px;
+        text-align: center;
+        display: inline-block;
+        padding: 0 2px;
+        background: #fa7d3c;
+        color: #fff;
+        border-radius: 3px;
+    }
+</style>
+<!--Main Nav-->
+<div class="grid_9_no_margin">
+    <div id="menu">
+        <ul>
+            <!--  icon_drop 加入此class 箭头标记 -->
+            <li{% if include.param == "index" %} class="current"{% endif %}>
+                <a href="/">首页</a>
+            </li>
+            <li{% if include.param == "company" %} class="current" {% endif %}>
+                <a href="/company">拳馆介绍</a>
+            </li>
+
+            <li{% if include.param == "teacher" %} class="current" {% endif %}>
+                <a href="/teacher/">教练风采</a>
+            </li>
+
+            <li{% if include.param == "schedule" %} class="current icon_drop" {% else %} class="icon_drop" {% endif %}>
+                <a href="/schedule/">课表</a>
+                <ul>
+                    <li>
+                        <a href="/schedule/" class="fade">课表</a>
+                    </li>
+                    <li>
+                        <a href="/student/" class="fade">招生简章</a>
+                    </li>
+                </ul>
+            </li>
+            <li{% if include.param == "things" %} class="current icon_drop" {% else %} class="icon_drop" {% endif %}>
+                <a href="/news/">动态<em id="notice"></em></a>
+                <ul>
+                    <li>
+                        <a href="/blog/" class="fade">博客<em id="postCount"></em></a>
+                    </li>
+                    <li>
+                        <a href="/vedio/" class="fade">视频</a>
+                    </li>
+                </ul>
+            </li>
+            <li{% if include.param == "student" %} class="current icon_drop" {% else %} class="icon_drop" {% endif %}>
+                <a href="#">学员考级查询</a>
+                <ul>
+                    <li>
+                        <a href="#" class="fade">学员考级查询</a>
+                    </li>
+                    <li>
+                        <a href="#" class="fade">学员最新动态</a>
+                    </li>
+                </ul>
+            </li>
+            <li{% if include.param == "about" %} class="current icon_drop" {% else %} class="icon_drop" {% endif %}>
+                <a href="/joinus/">关于我们</a>
+                <ul>
+                    <li>
+                        <a href="/joinus/" class="fade">加入我们</a>
+                    </li>
+                    <li>
+                        <a href="/contact/" class="fade">联系我们</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--End Main Nav-->

@@ -1,0 +1,132 @@
+/*
+	jQuery Coda-Slider v2.0 - http://www.ndoherty.biz/coda-slider
+	Copyright (c) 2009 Niall Doherty
+	This plugin available for use in all personal or commercial projects under both MIT and GPL licenses.
+*/
+
+/* Most common stuff you'll need to change */
+
+	.coda-slider-wrapper { 
+		width: 960px;
+	}
+	
+	/* Use this to keep the slider content contained in a box even when JavaScript is disabled */
+	.coda-slider-no-js .coda-slider { overflow: auto !important; padding-right: 0px }
+	
+	/* Change the width of the entire slider (without dynamic arrows) */
+	.coda-slider, .coda-slider .panel { 
+		width: 960px;
+	} 
+	
+	/* Change margin and width of the slider (with dynamic arrows) */
+	.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows .coda-slider .panel { 
+		width: 900px;
+	}
+	
+	.coda-slider-wrapper.arrows .coda-slider { 
+		margin: 0px 0px; 
+	}
+	
+	/* Arrow styling */
+	.coda-nav-left a {
+		height:140px;
+		width:30px;
+		background-image:url(../images/coda/arrows.png);
+		background-repeat:no-repeat;
+		background-position:left 60px;
+	}
+		
+	.coda-nav-right a {
+		height:140px;
+		width:30px;
+		background-image:url(../images/coda/arrows.png);
+		background-repeat:no-repeat;
+		background-position:right 60px;
+	}		
+	/* Tab nav */
+	.coda-nav ul li a.current { background:url(../images/bullets.png) no-repeat; background-position:0 -22px; }
+	
+	/* Panel padding */	
+	.large.heading {
+		font-size:50px;
+		font-family: 'Yanone Kaffeesatz', sans-serif;	
+		padding:10px 20px 10px 20px;
+	}
+	
+	.sub.heading {
+		font-size:40px;
+		font-family: 'Yanone Kaffeesatz', sans-serif;	
+		color:#ffffff;
+		padding:10px 20px 10px 20px;
+	}
+		
+	.normal.heading{
+		/* Fallback for web browsers that doesn't support RGBa */
+		background: rgb(0, 0, 0);
+		/* RGBa with 0.6 opacity */
+		background: rgba(0, 0, 0, .4);
+	}				
+	
+	/* Preloader */
+	.coda-slider p.loading { 
+		padding: 20px; 
+		text-align: center; 
+	}
+
+/* Don't change anything below here unless you know what you're doing */
+
+	/* Tabbed nav */
+	.coda-nav ul { clear: both; display: block; margin: auto; overflow: hidden; padding:0; }
+	.coda-nav ul li { display: inline }
+	.coda-nav ul li a { background:url(../images/bullets.png) no-repeat;  display: block; float: left; 	width:22px; height:22px; text-decoration: none; text-indent:-9999px; }
+	
+	/* Miscellaneous */
+	.coda-slider-wrapper { 
+		clear: both; 
+		overflow: auto; 
+	}
+	.coda-slider { 
+		float: left; 
+		overflow: hidden; 
+		position: relative; 
+	}
+	.coda-slider .panel { 
+		display: block; 
+		float: left; 
+	}
+	.coda-slider .panel-container { 
+		position: relative; 
+	}
+	.coda-nav-left { 
+		float: left; 
+	}
+	.coda-nav-right { 
+		float: right; 
+	}
+	.coda-nav-left a, .coda-nav-right a { 
+		display: block; 
+		text-align: center; 
+		text-decoration: none; 
+	}	
+	.codabox{
+		padding:0px;
+		text-shadow:#000000 0px 1px 0px;
+		/* Fallback for web browsers that doesn't support RGBa */
+		background: rgb(0, 0, 0);
+		/* RGBa with 0.6 opacity */
+		background: rgba(0, 0, 0, .6);
+		width:300px;
+		box-shadow: 0px 2px 2px #000000;
+		-webkit-border-radius:6px 6px 26px 6px;
+		-moz-border-radius:6px 6px 26px 6px;
+		border-radius:6px 6px 26px 6px;		
+	}
+	.highlight.heading{
+		/* Fallback for web browsers that doesn't support RGBa */
+		background: rgb(0, 0, 0);
+		/* RGBa with 0.6 opacity */
+		background: rgba(0, 0, 0, .8);
+	}
+	.large.heading {
+		color:#ffffff;
+	}

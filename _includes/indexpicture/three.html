@@ -1,0 +1,13 @@
+<li>
+    {% assign three = site.data.picturelist.three %}
+    {% if three.prettyPhoto == "default" %}
+    <a href="images/newImage/{{ three.img }}" class="alternate" rel="prettyPhoto" title="{{ three.title }}"></a>
+    {% else %}
+    <a href="images/newImage/{{ three.img }}" class="alternate" rel="prettyPhoto[{{ three.prettyPhoto }}]"
+       title="{{ three.title }}"></a>
+    {% for picture in three.group %}
+    <a href="{{picture.url}}" class="alternate4" rel="prettyPhoto[{{three.prettyPhoto}}]" title="{{picture.title}}"></a>
+    {% endfor %}
+    {% endif %}
+    <img src="images/newImage/{{ three.simg }}" width="209" height="160" alt="" />
+</li>

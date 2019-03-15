@@ -1,0 +1,132 @@
+/* LayerSlider Layers and Sublayers unique styles */
+
+#layerslider,
+#layerslider2 {
+	width: 1040px;
+	height: 500px;
+	margin: 0px auto 0px auto;
+	background-color:#ffffff;
+}
+
+/* Slide 1 */
+#text1 {
+	left: 80px;
+	top: 400px;
+	width: 690px;
+	height: 30px;
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(255, 255, 255);
+	/* RGBa with 0.6 opacity */
+	background: rgba(255, 255, 255, 0.6);
+	padding:20px;
+	padding-right:140px;
+	padding-top:30px;
+	font-size:30px;
+}
+#text1sub {
+	left: 100px;
+	top: 455px;
+	font-size:13px;
+}
+
+#button1 {
+	left: 800px;
+	top: 415px;
+}
+
+/* Slide 2 */
+
+#textpromotionlg {
+	display:block;
+	left: 650px;
+	top: 35px;
+	height:150px;
+	width:300px;
+	color:#08ab0f;
+	font-size:70px;
+	text-align:right;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	text-shadow:0 0 0 transparent, 0px 1px 0px #000000;
+}
+
+#textpromotion {
+	display:block;
+	left: 650px;
+	top: 80px;
+	height:150px;
+	width:300px;
+	color:#ffffff;
+	font-size:40px;
+	text-align:right;
+	line-height:40px;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	text-shadow:0 0 0 transparent, 0px 1px 0px #000000;
+}
+
+#textpromotionsub {
+	display:block;
+	left: 650px;
+	top: 160px;
+	height:150px;
+	width:300px;
+	color:#ffffff;
+	font-size:13px;
+	text-align:right;
+	text-shadow:0 0 0 transparent, 0px 1px 0px #000000;
+}
+
+#text2header {
+	left: 100px;
+	top: 160px;
+	padding:20px;
+	color:#ffffff;
+	font-size:28px;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	letter-spacing:1px;
+	width: 260px;
+	height: 220px;
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(0, 0, 0);
+	/* RGBa with 0.6 opacity */
+	background: rgba(0, 0, 0, 0.6);
+	padding:20px;
+}
+
+#text2 {
+	left: 100px;
+	top: 190px;
+	width: 260px;
+	padding:20px;
+	color:#ffffff;
+}
+
+#button2 {
+	left: 110px;
+	top: 355px;
+}
+
+/* Slide 3 */
+
+#text3header {
+	left: 100px;
+	top: 20px;
+	width: 400px;
+	padding:20px;
+	color:#222222;
+	font-size:45px;
+	line-height:45px;
+}
+
+#text3 {
+	left: 100px;
+	top: 190px;
+	width: 260px;
+	padding:20px;
+	color:#222222;
+}
+
+#button3 {
+	left: 110px;
+	top: 355px;
+}
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>招生简章 | 成龙拳馆</title>
+    {% include header.html %}
+</head>
+
+<body>
+    <div id="maincontent">
+
+        <!--Top Nav-->
+        <div class="bar">
+          {% include share.html %}
+      </div>
+      <!--End Top Nav-->
+
+      <div class="box">
+        <a name="top" id="top"></a>
+
+        <!--Main Bar-->
+        <div class="container_12 navbar">
+           <!--Logo-->
+            {% include logo.html %}
+           <!--End Logo-->
+            {% include main-nav.html param='schedule' %}
+    </div>
+    <!--End Main Bar-->
+
+    <div class="clearsmall"></div>
+    
+    <div class="headertext">招生简章<span>跆拳道/散打/女子防身术/健康减肥/中学生体能改善</span></div>
+
+    <div class="container_12">
+
+        <!--Start Grid 12-->
+        <div class="grid_12">
+            
+            <p></p>
+            
+            <div class="clearsmall"></div>
+            
+            <div id="container">
+                <ul class="menu">
+                    <li id="one" class="active">少儿散打班</li>
+                    <li id="two" class="">少儿跆拳道班</li>
+                    <li id="three" class="">私教授课</li>
+                </ul>
+                <span class="clearnospacing"></span>
+                {% include student1.html %}
+                {% include student2.html %}
+                {% include student3.html %}              
+            </div>
+            
+            
+        </div>
+        <!--End Grid 12-->
+        <div class="clearsmall"></div>
+        <p>
+            如果对上有疑问，欢迎致电（网页下方），将有专业教练为你指导
+        </p>            
+        
+    </div>
+    <!--End Grid 12-->
+          <div class="clearsmall"></div>
+          {% include changyan.html %}
+
+</div>
+
+<div class="clearsmall"></div>
+
+<!--End Box-->
+
+
+<!--Footer-->
+
+        {% include js.html %}
+{% include footer.html %}
+{% include copyright.html %}
+
+
+</div>
+</body>
+</html>

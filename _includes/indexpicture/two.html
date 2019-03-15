@@ -1,0 +1,13 @@
+<li>
+    {% assign two = site.data.picturelist.two %}
+    {% if two.prettyPhoto == "default" %}
+    <a href="images/newImage/{{ two.img }}" class="alternate" rel="prettyPhoto" title="{{ two.title }}"></a>
+    {% else %}
+    <a href="images/newImage/{{ two.img }}" class="alternate" rel="prettyPhoto[{{ two.prettyPhoto }}]"
+       title="{{ two.title }}"></a>
+    {% for picture in two.group %}
+    <a href="{{picture.url}}" class="alternate4" rel="prettyPhoto[{{two.prettyPhoto}}]" title="{{picture.title}}"></a>
+    {% endfor %}
+    {% endif %}
+    <img src="images/newImage/{{ two.simg }}" width="209" height="160" alt="" />
+</li>

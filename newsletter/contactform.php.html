@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+	
+	<title>Newsletter</title>
+	<style type="text/css">@import url("http://fonts.googleapis.com/css?family=PT+Sans");</style>
+	<style type="text/css">@import url("http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz");</style>
+	<link rel="stylesheet" type="text/css" href="contact.css" />
+	<script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
+      
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+
+<!-- Form Code Start -->
+<form id='contactus' action='/themeforest/balance/newsletter/contactform.php.html' method='post' accept-charset='UTF-8' />
+	<fieldset>
+		<input type='hidden' name='submitted' id='submitted' value='1' />
+		<input type='hidden' name='id5338aa270433a2780027' value='3d8b86a509eb4f104195261d51aa1cc1' />
+		<input type='text' class='spmhidip' name='sp5b8e93ae39bbf5ca3601139d0354cd82' />
+		<div><span class='error'></span></div>
+		<input type='text' name='email' id='email' value='Your Email' maxlength="50" onfocus="if(this.value=='Your Email')this.value='';" onblur="if(this.value=='')this.value='Your Email';" />
+		<input type='submit' name='Submit' value='Subscribe' class="button highlight small" />
+	</fieldset>
+</form>
+<!-- client-side Form Validations:
+Uses the excellent form validation script from JavaScript-coder.com-->
+
+<script type='text/javascript'>
+// <![CDATA[
+
+    var frmvalidator  = new Validator("contactus");
+    frmvalidator.EnableOnPageErrorDisplay();
+    frmvalidator.EnableMsgsTogether();
+
+    frmvalidator.addValidation("email","req","Email required");
+
+    frmvalidator.addValidation("email","email","Email required");
+
+// ]]>
+</script>
+
+</body>
+</html>

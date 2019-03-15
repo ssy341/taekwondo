@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>博客 | 成龙拳馆</title>
+
+{% include header.html %}
+<!-- 分页 -->
+
+<link type="text/css" href="{{ site.baseurl }}pager/css/flexslider.min.css?v=3" rel="stylesheet" />
+<link rel="stylesheet" href="{{ site.baseurl }}pager/css/pagination.css" />
+</head>
+
+<body>
+<div id="maincontent">
+
+<!--Top Nav-->
+<div class="bar">
+	 {% include share.html %}    
+</div>
+<!--End Top Nav-->
+
+<!--Start Box-->
+<div class="box">
+<a name="top" id="top"></a>
+
+<!--Main Bar-->
+<div class="container_12 navbar">
+    <!--Logo-->
+    {% include logo.html %}
+	<!--End Logo-->
+	<!--Main Nav--> 
+	<div class="grid_9_no_margin">
+
+			<div id="menu">
+				 <ul>
+                                <!--  icon_drop 加入此class 箭头标记 -->
+                                <li>
+                                    <a href="/">首页</a>
+                                </li>
+                                <li class="icon_drop current">
+                                    <a href="company.html">关于我们</a>
+                                    <ul>
+                                        <li>
+                                            <a href="company.html" class="fade">拳馆介绍</a>
+                                        </li>
+                                        <li>
+                                            <a href="teacher.html" class="fade">教练介绍</a>
+                                        </li>
+                                        <li>
+                                            <a href="joinus.html" class="fade">加入我们</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="student.html">招生简章</a>
+                                </li>
+                                <li class="icon_drop">
+                                    <a href="news.html">动态</a>
+                                    <ul>
+                                        <li>
+                                            <a href="news.html" class="fade">新闻</a>
+                                        </li>
+                                        <li >
+                                            <a href="blog.html" class="fade">博客</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="icon_drop">
+                                    <a href="vedio.html">会员专区</a>
+                                    <ul>
+                                        <li>
+                                            <a href="vedio.html" class="fade">视频教学</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="fade">活动花絮</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="fade">赛事荣誉</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="contact.html">联系我们</a>
+                                </li>
+                            </ul>
+			</div>  
+	</div>
+    <!--End Main Nav-->
+</div>
+<!--End Main Bar-->
+
+<div class="clearsmall"></div>
+    
+<div class="headertext">BLOG<span>Dolor vel metus atu accumsan</span></div>
+
+<div class="container_12">
+
+   <!-- 这里显示分页 -->
+    <div id="Pagination" class="pagination"></div>
+    <div class="grid_9" id="htcList">
+        <!-- 这里显示blog -->
+    </div>
+    <div id="Searchresult" style="display:none;"></div>
+    <!--End Grid 9-->
+ 
+    
+	<!--Start Sidebar--> 
+    <div class="grid_3 sidebarright alignright">
+    
+            <!--Search-->	
+			<form method="get" id="searchform" action="#" />
+				<fieldset class="search">
+				<input type="text" class="field" value="Search" onfocus="if(this.value=='Search')this.value='';" onblur="if(this.value=='')this.value='Search';" />
+				<button class="btn"></button>
+				</fieldset>
+			</form>
+            
+            <div class="clear"></div>               
+
+            <h4>RECENT NEWS</h4>
+            <!--Start Image Widget-->              
+            <div class="imagewidget">
+        		<ul>
+            		<li><img src="images/blog/image1.jpg" alt="" height="40" width="50" /><a href="#"> Phasellus totor scing<span class="light italic"><br />Read More</span></a></li>
+                    <li><img src="images/blog/image2.jpg" alt="" height="40" width="50" /><a href="#"> Sem lacinia an mauris<span class="light italic"><br />Read More</span></a></li>
+            		<li><img src="images/blog/image3.jpg" alt="" height="40" width="50" /><a href="#"> Egestas phaslus sceler<span class="light italic"><br />Read More</span></a></li>
+            		<li><img src="images/blog/image4.jpg" alt="" height="40" width="50" /><a href="#"> Facilisis metus aliquet<span class="light italic"><br />Read More</span></a></li>
+            	</ul>
+   			</div>
+            <!--End Image Widget-->
+            
+            <div class="clear"></div>               
+             
+            <h4>POPULAR POSTS</h4>
+            <!--Start List Widget-->              
+            <div class="widget">
+        		<ul>
+            		<li><a href="#">Phasellus tortor - <span class="light italic">5 Comments</span></a></li>
+                    <li><a href="#">Sem lacinia ante - <span class="light italic">8 Comments</span></a></li>
+                    <li><a href="#">Tristique ante ut - <span class="light italic">5 Comments</span></a></li>
+            		<li><a href="#">Egestas phasellus - <span class="light italic">2 Comments</span></a></li>
+            		<li><a href="#">Facilisis metus - <span class="light italic">12 Comments</span></a></li>
+            		<li><a href="#">Asellus tortor - <span class="light italic">4 Comments</span></a></li>                                   
+        		</ul>
+   			</div>
+            <!--End List Widget-->
+            
+            <div class="clear"></div>       
+
+            <h4>RECENT EVENTS</h4>
+            <!--Flickr-->
+            <ul id="sidebarflickr" class="sidebarthumbs">
+            <li></li>
+            </ul>
+            <!--End Flickr-->
+            
+            <div class="clear"></div>
+            
+    		<h4>NEWS</h4>
+            <p>Lorem ipsum dolor sit amet <span class="bold">bold font</span> adipiscing elit. Proin vel <span class="italic">"italics mauris con lacinia dapibus"</span> sit amet neque. Praesent scelerisque <span class="underline">underline amet ante suscipit</span> et aliquet magna fringilla. <span class="bold italic">Bold itallic a purus ut</span> justo.</p>            
+            
+            <div class="clear"></div>
+            
+            <h4>TAGS</h4>
+            <a href="#" class="button tag small">These</a> <a href="#" class="button tag small">Are</a> <a href="#" class="button tag small">Tags</a> <a href="#" class="button tag small">And</a> <a href="#" class="button tag medium">Can </a> <a href="#" class="button tag large">Be</a> <a href="#" class="button tag large">Labeled</a> <a href="#" class="button tag medium">Anything</a> <a href="#" class="button tag small">You</a> <a href="#" class="button tag small">Want</a> <a href="#" class="button tag small">These</a> <a href="#" class="button tag small">Are</a> <a href="#" class="button tag small">Tags</a> <a href="#" class="button tag small">And</a> <a href="#" class="button tag small">Can </a> <a href="#" class="button tag small">Be</a> <a href="#" class="button tag small">Labeled</a> <a href="#" class="button tag small">Anything</a> <a href="#" class="button tag small">You</a> <a href="#" class="button tag small">Want</a>
+            
+            <div class="clear"></div>
+       
+     </div>
+     <!--End Sidebar-->
+    
+</div>
+
+<div class="clearnospacing"></div>
+
+</div>
+<!--End Box-->
+    {% include js.html %}
+{% include footer.html %}
+{% include copyright.html %}
+
+
+
+</div></body></html>
+
+
+<!-- 分页 -->
+
+<script type="text/javascript" src="{{ site.baseurl }}pager/js/jquery.pagination.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}pager/js/xhdata.js"></script>

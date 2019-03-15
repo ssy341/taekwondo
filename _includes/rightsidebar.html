@@ -1,0 +1,41 @@
+<!--右边展示栏-->
+<!--google ad-->
+<div>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- 成龙拳馆blog -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2101546703939638"
+         data-ad-slot="5255567900"
+         data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<!--Search-->
+<div>
+    <script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=8003754136251679904' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
+</div>
+
+
+<div class="clear"></div>
+
+<h4>标签</h4>
+{% for tag in site.tags %}
+<a href="#" class="button tag small">{{ tag | first }} </a>
+{% endfor %}
+<div class="clear"></div>
+
+<!--
+<h4>照片墙</h4>
+&lt;!&ndash;Flickr&ndash;&gt;
+<ul id="sidebarflickr" class="sidebarthumbs">
+    <li></li>
+</ul>
+&lt;!&ndash;End Flickr&ndash;&gt;
+
+<div class="clear"></div>-->
+
+<!--Flickr Feed--><!--
+<script type="text/javascript" src="{{ site.baseurl }}js/jflickrfeed.min.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}js/setup.js"></script>-->

@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>行业动态 | 成龙拳馆</title>
+<style type="text/css">@import url("/css/reset.css");</style>
+<style type="text/css">@import url("/css/grid.css");</style>
+<style type="text/css">@import url("/css/styles.css");</style>
+<style type="text/css">@import url("/css/tabs.css");</style>
+<!--Common jQuery-->
+<script src="/js/jquery-1.6.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+<!--Coda Slider-->
+<style type="text/css">@import url("/css/coda-slider-2.0.css");</style>
+
+<!-- 分页 -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+<!--Parallax-->
+<style type="text/css">@import url("/layerslider/css/layerslider.css");</style>
+<style type="text/css">@import url("/css/parallax.css");</style>
+<script src="/layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
+
+<!--Toggle-->
+<style type="text/css">@import url("/css/toggle.css");</style>
+
+<!--Pretty Photo-->
+<style type="text/css">@import url("/css/prettyPhoto.css");</style>
+<script src="/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+
+<!--Nivo-->
+<style type="text/css">@import url("/css/nivo-slider-blog.css");</style>
+<script type='text/javascript' src='/js/jquery.nivo.slider.js'></script>
+
+<!--Background-->
+<script type="text/javascript" src="/js/jquery.fullbg.min.js"></script>
+<!--New Menu-->
+<style type="text/css">@import url("/css/menu.css");</style>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/easing.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+
+<body>
+<div id="maincontent">
+
+<!--Top Nav-->
+<div class="bar">
+	 {% include share.html %}    
+</div>
+<!--End Top Nav-->
+
+<!--Start Box-->
+<div class="box">
+<a name="top" id="top"></a>
+
+<!--Main Bar-->
+<div class="container_12 navbar">
+	<!--Logo-->
+    {% include logo.html %}
+	<!--End Logo-->
+    {% include main-nav.html param='things' %}
+</div>
+<!--End Main Bar-->
+
+<div class="clearsmall"></div>
+    
+<div class="headertext">新闻<span>业界动态</span></div>
+
+<div class="container_12">
+    <!-- 这里显示分页 -->
+    <div id="pager"></div>
+    <div class="grid_9" id="htcList">
+        <!-- 这里显示blog -->
+    </div>
+    <div id="Searchresult" style="display:none;"></div>
+    <!--End Grid 9-->
+
+
+    <!--Start Sidebar-->
+    <div class="grid_3 sidebarright alignright">
+        {% include rightsidebar.html %}
+    </div>
+    <!--End Sidebar-->
+
+    
+</div>
+
+<div class="clearnospacing"></div>
+
+</div>
+<!--End Box--> 
+    <!--Footer 引入footer.html-->
+            {% include footer.html %}
+
+            <!-- 引入copyright.html -->
+            {% include copyright.html %}
+
+<!--Tool Tip-->
+<script type="text/javascript">
+var tip = $();
+$(document).ready(function() {
+    //Tooltips
+    $(".tip_trigger").hover(function(){
+        tip = $(this).find('.tip');
+        tip.show(); //Show tooltip
+    }, function() {
+        tip.hide(); //Hide tooltip
+    }).mousemove(function(e) {
+        var mousex = e.pageX + 20; //Get X coodrinates
+        var mousey = e.pageY + 20; //Get Y coordinates
+        var tipWidth = tip.width(); //Find width of tooltip
+        var tipHeight = tip.height(); //Find height of tooltip
+
+        //Distance of element from the right edge of viewport
+        var tipVisX = $(window).width() - (mousex + tipWidth);
+        //Distance of element from the bottom of viewport
+        var tipVisY = $(window).height() - (mousey + tipHeight);
+
+        //Absolute position the tooltip according to mouse position
+        tip.css({  top: mousey, left: mousex });
+    });
+});
+</script>
+
+
+
+
+
+
+<!-- 分页 -->
+    <script type="text/javascript" src="/js/PagerView.js"></script>
+
+    <script type="text/javascript">
+        var pager = new PagerView('pager','htcList','news');
+
+        $.get('/assets/newlist.json', function (data) {
+            if(typeof data != 'object'){
+                data = JSON.parse(data);
+            }
+            pager.itemCount = data.length;
+            var first = [];
+            if (pager.itemCount >= 5) {
+                for (var j = 0; j < 5; j++) {
+                    first[j] = data[j];
+                }
+            } else {
+                first = data;
+            }
+            $("#htcList").empty();
+            $.each(first, function (key, val) {
+                $("#htcList").append(pager.toDiv(val.date, val.url, val.title, val.short, val.logo, val.from, val.author));
+            });
+            pager.render();
+
+        });
+
+
+
+        pager.onclick = function (index) {
+
+            pager.getJson("/assets/newlist.json",index);
+        };
+
+
+        //判断是否看过这个页面
+        localStorage['clboxing.com.news'] = new Date().getTime();
+
+    </script>
+
+</div></body></html>

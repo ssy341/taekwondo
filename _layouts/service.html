@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>教练介绍 | 成龙拳馆</title>
+{% include header.html %}
+</head>
+
+<body>
+<div id="maincontent">
+
+<!--Top Nav-->
+<div class="bar">
+    {% include share.html %}
+</div>
+<!--End Top Nav-->
+
+<div class="box">
+<a name="top" id="top"></a>
+
+<!--Main Bar-->
+<div class="container_12 navbar">
+    <!--Logo-->
+    {% include logo.html %}
+	<!--End Logo-->
+    {% include main-nav.html param='teacher' %}
+</div>
+<!--End Main Bar-->
+
+<div class="clearsmall"></div>
+    
+<div class="headertext">教练风采<span>优秀的团队</span></div>
+
+<img src="/images/teacher/teacher.jpg" width="960" alt="教练合照" />
+                          
+<div class="clear"></div>    
+
+<div class="clearnospacing"></div>   
+               <!-- 分界线  -->
+    <h3>教练介绍</h3>
+<div class="dividernospacing"></div>
+
+                 <!--Portfolio Thumbnails-->
+                 <div class="grid_12_no_margin">
+
+                    <ul id="list" class="image-grid teacher portfolio-content">
+                        <li data-id="1" data-type="digital_illustration">
+                            <div class="hover_slideshow">
+                                <a href="{{site.baseurl}}images/teacher/heliwen2.jpg" rel="prettyPhoto[heliwen]" 
+                                title="国家一级">
+                                    <img src="{{site.baseurl}}images/teacher/heliwen2.jpg" alt="何礼文" 
+                                    width="150" height="225" />
+                                </a>
+                                 <a href="{{site.baseurl}}images/teacher/heliwen.jpg" rel="prettyPhoto[heliwen]" title="何礼文"></a>
+                            </div>
+                            <div class="text_box">
+                            	<h4>何礼文</h4>
+                            </div>
+                        </li>
+                                         
+                        <li data-id="5" data-type="digital_illustration">
+                            <div class="hover_slideshow">
+                                <a href="{{site.baseurl}}images/teacher/liaozhiming.jpg" rel="prettyPhoto" title="廖智敏">
+                                    <img src="{{site.baseurl}}images/teacher/liaozhiming-s.jpg" alt="" width="150" height="225" />
+                                </a>
+                            </div> 
+                            <div class="text_box">
+                            	<h4>廖智敏</h4>
+                            </div>
+                        </li>
+                                           
+                        <li data-id="11" data-type="digital_illustration">
+                            <div class="hover_slideshow">
+                            <a href="{{site.baseurl}}images/teacher/luoxiaofeng.jpg" rel="prettyPhoto" title="罗小丰">
+                            <img src="{{site.baseurl}}images/teacher/luoxiaofeng-s.jpg" alt="" width="150" height="225" /></a>
+                            </div>
+                            <div class="text_box">
+                            	<h4>罗小丰</h4>
+                            </div>
+                        </li>
+
+                         <li data-id="11" data-type="digital_illustration">
+                            <div class="hover_slideshow">
+                            <a href="{{site.baseurl}}images/teacher/chang.jpg" rel="prettyPhoto" title="常胤">
+                            <img src="{{site.baseurl}}images/teacher/chang-s.jpg" alt="" width="150" height="225" /></a>
+                            </div>
+                            <div class="text_box">
+                                <h4>常胤</h4>
+                            </div>
+                        </li>
+                         <li data-id="11" data-type="digital_illustration">
+                            <div class="hover_slideshow">
+                            <a href="{{site.baseurl}}images/teacher/penghao.jpg" rel="prettyPhoto" title="彭浩">
+                            <img src="{{site.baseurl}}images/teacher/penghao-s.jpg" alt="" width="150" height="225" /></a>
+                            </div>
+                            <div class="text_box">
+                                <h4>彭浩</h4>
+                            </div>
+                        </li>
+                    </ul>
+                 
+				  </div>
+<div class="clearnospacing"></div>
+    {% include changyan.html %}
+
+<div class="clear"></div>                                          
+
+
+
+</div>
+    {% include js.html %}
+{% include footer.html %}
+{% include copyright.html %}
+
+
+</div></body></html>
